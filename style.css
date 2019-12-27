@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.navigation {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+ul li {
+  padding: 1rem;
+  transition: all 500ms ease-in-out;
+}
+
+ul li::before,
+ul li::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+ul li::before {
+  z-index: -2;
+}
+
+ul li::after {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  transform: translateX(-50%);
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 20rem;
+  line-height: 100vh;
+  letter-spacing: 30rem;
+  text-transform: uppercase;
+  transition: all 500ms ease-in-out;
+}
+
+ul li:hover {
+  background: #fff;
+  transition: all 500ms ease-in-out;
+}
+
+ul li:hover::before,
+ul li:hover::after {
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+ul li:hover::after {
+  letter-spacing: normal;
+  transition: all 500ms ease-in-out;
+}
+
+ul li:nth-child(1)::before {
+  content: "";
+  background: #81eaeb;
+}
+
+ul li:nth-child(1)::after {
+  content: "Home";
+}
+
+ul li:nth-child(2)::before {
+  content: "";
+  background: #fe7673;
+}
+
+ul li:nth-child(2)::after {
+  content: "About";
+}
+
+ul li:nth-child(3)::before {
+  content: "";
+  background: #55f0c5;
+}
+
+ul li:nth-child(3)::after {
+  content: "Services";
+}
+
+ul li:nth-child(4)::before {
+  content: "";
+  background: #a29cfd;
+}
+
+ul li:nth-child(4)::after {
+  content: "Work";
+}
+
+ul li:nth-child(5)::before {
+  content: "";
+  background: #fc78a6;
+}
+
+ul li:nth-child(5)::after {
+  content: "Team";
+}
+
+ul li:nth-child(6)::before {
+  content: "";
+  background: #fee9a5;
+}
+
+ul li:nth-child(6)::after {
+  content: "Contact";
+}
+
+ul li a {
+  text-decoration: none;
+  font-weight: 1000;
+  color: #000;
+  font-size: 3rem;
+}
